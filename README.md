@@ -1,18 +1,41 @@
-## Getting Started
+## Introdução à Orientação a Objetos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# POO INTRO
 
-## Folder Structure
+```mermaid
+graph TD;
+    POO-->Abstracao;
+    POO-->Encapsulamento; 
+    POO-->Heranca;   
+    POO-->Polimorfismo;
+    POO;
+```
 
-The workspace contains two folders by default, where:
+## Abstração
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+A POO preconiza a criação de obsjetos moldados em objetos do mundo real; desta maneira o entendimento das relações e interações tornam-se mais tangíveis e compreensíveis.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Porém, não se pode modelar com 100% de exatidão os objetos do mundo real; então é necessário restringir apenas os atributos e comportamentos necessários para o modelo de domínio de nosso software.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Esta restrição na seleção para o modelo dos objetos é o chamamos de `Abstração`.
 
-## Dependency Management
+## Encapsulamento
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+O Encapsulamento serve para controlar o acesso aos atributos e métodos de uma classe. É uma forma eficiente de proteger os dados manipulados dentro da classe, além de determinar onde esta classe poderá ser manipulada.
+
+Também é utilizado para prover uma forma única de acesso aos atributos de uma classe, assim como encapsular comportamentos na atribuição de dados.
+
+### Tipos de modificadores de acesso
+
+| MODIFICADOR     | CLASSE | PACOTE | SUBCLASSE | GLOBALMENTE |
+| --------------- | ------ | ------ | --------- | ----------- |
+| Public          | SIM    | SIM    | SIM       | SIM         |
+| Protected       | SIM    | SIM    | SIM       | NÃO         |
+| Sem modificador | SIM    | SIM    | NÃO       | NÃO         |
+| Private         | SIM    | NÃO    | NÃO       | NÃO         |
+
+
+## Herança 
+
+## Plomorfismo
+
