@@ -6,9 +6,9 @@ public class Aluno {
     // Classe é uma estrutura que define atributos e compotamentos
     
     // Atrbituos [ra, nome, email]
-    public String ra;
-    public String nome;
-    public String email;
+    private String ra;
+    private String nome;
+    private String email;
 
     // Comportamentos 
     // Padronizar a criação de objetos Aluno
@@ -36,10 +36,42 @@ public class Aluno {
         return aluno;
     }
 
-    public void exibirDados() {
-        System.out.println("\nRA: " + ra);
-        System.out.println("Nome: " + nome);
-        System.out.println("E-mail: " + email);
+    private boolean isEmailValido(String email) {
+        return email.contains("@");
+    }
+
+    public String getRa() {
+        return ra;
+    }
+
+    public void setRa(String ra) {
+        this.ra = ra;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        if(isEmailValido(email)) {
+            this.email = email;
+            return;
+        }
+        System.out.println("É necessário um e-mail válido com o caracter @.");
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno [email=" + email + ", nome=" + nome + ", ra=" + ra + "]";
     }
 
 }

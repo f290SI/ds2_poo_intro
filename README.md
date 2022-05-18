@@ -37,5 +37,34 @@ Também é utilizado para prover uma forma única de acesso aos atributos de uma
 
 ## Herança 
 
-## Plomorfismo
+A Herança possibilita um projeto de classes que possam compartilhar atributos e comportamentos; fazendo com que o reaproveitamento de código seja mais efetivo e simplificado.
+
+Podemos criar classes de base e fazer com que o código base seja `passado` às classe que a extendam.
+
+```mermaid
+classDiagram
+    class Animal{
+        - String nomeCientifico;
+        - String habitat;
+        - Integer fome;
+        - String urlImagem;
+        + emitirSom()
+        + toString()
+    }
+    Animal <|-- Gato
+    Animal <|-- Cachorro
+    Animal <|-- Ave
+    Ave <|-- Aguia
+    Gato : emitirSom()
+    Cachorro : emitirSom()
+    Aguia : emitirSom()
+    class Voavel {
+        <<interface>>
+        voar()
+    }
+    Aguia ..> Voavel
+
+``` 
+
+## Polimorfismo
 
